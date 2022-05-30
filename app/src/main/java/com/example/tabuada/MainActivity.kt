@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             //acertou
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Resultado")
-            builder.setMessage("Acertou!")
-            builder.setNeutralButton("OK") { dialog, which -> dialog.cancel() }
+            builder.setMessage("Correto!")
+            builder.setNeutralButton("Proxima ->") { dialog, which -> dialog.cancel() }
             builder.show()
             Number1.text = Random.nextInt(1,9).toString()
             Number2.text = Random.nextInt(1,9).toString()
@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
             //errou
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Resultado")
-            builder.setMessage("Errou...")
-            builder.setNeutralButton("OK") { dialog, which -> dialog.cancel() }
+            builder.setMessage("Não foi dessa vez...")
+            builder.setNeutralButton("Tente novamente ->") { dialog, which -> dialog.cancel() }
             builder.show()
             atualizaRating(0)
 
@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
                 ratingBar.rating = ratingBar.rating + 1
             }else{
                 val builder = AlertDialog.Builder(this)
-                builder.setTitle("Vencedor")
-                builder.setMessage("Reiniciando o jogo")
-                builder.setNeutralButton("OK") { dialog, which -> dialog.cancel() }
+                builder.setTitle("Você ganhou!!!")
+                builder.setMessage("Tentar Novamente")
+                builder.setNeutralButton("Vamos lá ->") { dialog, which -> dialog.cancel() }
                 builder.show()
                 ratingBar.rating = 0F
 
