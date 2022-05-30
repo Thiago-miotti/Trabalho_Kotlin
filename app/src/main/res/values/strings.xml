@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tabuada</string>
+    <string name="_6">6</string>
+    <string name="_5">5</string>
+    <string name="x">X</string>
+    <string name="resultado">Resultado</string>
+</resources>
